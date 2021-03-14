@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
 
 #Configuring files
 COPY srcs/* ./
+RUN rm var/www/html/index.nginx-debian.html \
+	&& mv index.html index.css var/www/html/
 
 ENV AUTOINDEX on
 

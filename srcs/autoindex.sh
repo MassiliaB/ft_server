@@ -1,4 +1,6 @@
 #!/bin/sh
 
-if [ "$AUTOINDEX" = "off" ] ;
-	then rm /etc/nginx/sites-available/default && mv default_off /etc/nginx/sites-available/ ;fi
+if [ "$AUTOINDEX" = "off" ] ;then 
+	sed -i "s/autoindex on/autoindex off/g" /etc/nginx/sites-enabled/default
+	service nginx reload
+fi
