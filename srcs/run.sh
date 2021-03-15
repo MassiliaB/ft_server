@@ -1,6 +1,6 @@
 #!/bin/sh
 
-bash autoindex.sh
+./autoindex.sh
 
 service php7.3-fpm start
 #Configure a mysql database

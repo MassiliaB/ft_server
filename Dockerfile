@@ -28,7 +28,7 @@ RUN wget https://github.com/FiloSottile/mkcert/releases/download/v1.1.2/mkcert-v
 RUN tar xvf latest.tar.gz && rm -rf latest.tar.gz \
 	&& mv wordpress /var/www/html/ \
 	&& chown -R www-data:www-data /var/www/html/wordpress \
-	&& mv wp-config.php /var/www/html/wordpress/wp-config.php 
+	&& mv wp-config.php /var/www/html/wordpress/ 
 #	&& mv wordpress.conf /etc/nginx/sites-available/ \
 #	&& ln -s /etc/nginx/sites-available/wordpress.conf /etc/nginx/sites-enabled/
 

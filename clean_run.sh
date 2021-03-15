@@ -6,9 +6,10 @@ docker ps
 if [ "$(docker ps -q -f name=ft_server)" ]
 then
 	docker stop ft_server
+	echo "Stoping the last running ft_server"
 fi
 
-if [ "$(docker ps -aq -f status=exited -f name=ft_server)" ]
+if [ "$(docker ps -aq -f status=exited)" ]
 then
 	docker system prune
 fi
