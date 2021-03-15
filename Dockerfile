@@ -29,8 +29,6 @@ RUN tar xvf latest.tar.gz && rm -rf latest.tar.gz \
 	&& mv wordpress /var/www/html/ \
 	&& chown -R www-data:www-data /var/www/html/wordpress \
 	&& mv wp-config.php /var/www/html/wordpress/ 
-#	&& mv wordpress.conf /etc/nginx/sites-available/ \
-#	&& ln -s /etc/nginx/sites-available/wordpress.conf /etc/nginx/sites-enabled/
 
 #Install and configure PhpMyadmin
 RUN mkdir /var/www/html/phpmyadmin \
