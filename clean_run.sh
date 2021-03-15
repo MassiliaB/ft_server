@@ -8,9 +8,9 @@ if [ "$(docker ps -q -f name=ft_server)" ]; then
 fi
 
 if [ "$(docker ps -aq -f status=exited -f name=ft_server)" ]; then
-	docker rm ft_server ;
-	then echo "There is no container anymore :" ;
-	then docker ps
+	docker rm ft_server
+	echo "There is no container anymore :"
+	 docker ps
 fi
 
 docker system prune
