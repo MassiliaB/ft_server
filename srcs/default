@@ -25,7 +25,7 @@ server {
 	root /var/www/html;
 	
 	# Add index.php to the list if you are using PHP
-	index index.php index.html index.htm index.nginx-debian.html;
+	index index.php index.html index.htm;
 
 	server_name _;
 	
@@ -48,8 +48,8 @@ server {
 	# Don't use them in a production server!
 	#
 	# include snippets/snakeoil.conf;
- 	autoindex on;
 	location / {
+ 		autoindex on;
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
 		try_files $uri $uri/ =404;
@@ -69,9 +69,9 @@ server {
 	# deny access to .htaccess files, if Apache's document root
 	# concurs with nginx's one
 	#
-	#location ~ /\.ht {
-	#	deny all;
-	#}
+	location ~ /\.ht {
+		deny all;
+	}
 }
 
 # Virtual Host configuration for example.com
