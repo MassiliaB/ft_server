@@ -2,20 +2,30 @@
 
 echo "Containers that are running :"
 docker ps
-    
+   
 if [ "$(docker ps -q)" ]
 then
 	docker stop ft_server
 	echo "Stoping the last running ft_server"
 fi
-
-if [ "$(docker ps -aq -f status=exited)" ]
+if [ "$1" = "clean" ]
 then
 	docker system prune
 fi
 
+if [ "$(docker ps -aq)" ]
+then
+	docker rm ft_server
+fi
+
 docker build -t ft_server .
 
-docker run --env AUTOINDEX=on --name ft_server -d -p 443:443 -p 8080:80 ft_server
+if [ "$1" = "on" ]
+then
+	docker run --env AUTOINDEX=on --name ft_server -d -p 443:443 -p 80:80 ft_server
+else
+	docker run --env AUTOINDEX=off --name ft_server -d -p 443:443 -p 80:80 ft_server
+fi
 
 docker exec -it ft_server bash
+
