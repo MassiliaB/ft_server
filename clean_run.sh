@@ -3,10 +3,10 @@
 echo "Containers that are running :"
 docker ps
    
-if [ "$(docker ps -q)" ]
+if [ "$(docker ps -q -f "name=ft_server" )" ]
 then
 	docker stop ft_server
-	echo "Stoping the last running ft_server"
+	echo "Stoping the last running ft_serverer"
 fi
 if [ "$1" = "clean" ]
 then
