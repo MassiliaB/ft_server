@@ -12,7 +12,7 @@ About system administration and Docker. Set up an Nginx server with a Wordpress,
 
 In one word a Docker provides the possibility to pack in an isolated environment called a container. A container is like a virtual machine but contrarily to the VM it shares its ressources with the host and is much more lighter.
 
-![1](https://user-images.githubusercontent.com/62947287/112332822-5a328c80-8cba-11eb-847b-dd0db55cd888.png)
+![2](https://user-images.githubusercontent.com/62947287/112336036-02495500-8cbd-11eb-9cc0-68477fea4ef4.png)
 
 **The Dockerfile**
 
