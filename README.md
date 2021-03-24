@@ -3,7 +3,7 @@
 42 project March 2021.
 
 ## Subject
-About system administration and Docker. Set up an Nginx server with a a Wordpress and PhpMyadmin running in a single container.
+About system administration and Docker. Set up an Nginx server with a Wordpress and PhpMyadmin, with a Mysql database, running in a single container.
 
 ## The project
 **What is Docker ?**
